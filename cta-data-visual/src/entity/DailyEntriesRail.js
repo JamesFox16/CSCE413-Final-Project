@@ -1,11 +1,11 @@
 export default class DailyEntriesRail {
-    stationId: number;
-    stationName: string;
-    date: Date;
-    dayType: string;
-    rides: number;
+    stationId;
+    stationName;
+    date;
+    dayType;
+    rides;
 
-    constructor(e: any) {
+    constructor(e) {
         this.stationId = e.stationId;
         this.stationName = e.stationName;
         this.date = e.date;

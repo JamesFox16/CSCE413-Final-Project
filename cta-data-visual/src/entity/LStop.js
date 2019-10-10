@@ -1,28 +1,28 @@
 export default class LStop {
-    stopId: number;
-    directionId: string;
-    stopName: string;
-    stationName: string;
-    stationDescriptive: string;
-    mapId: number;
-    ada: boolean;
-    red: boolean;
-    blue: boolean;
-    g: boolean;
-    brn: boolean;
-    p: boolean;
-    pexp: boolean;
-    y: boolean;
-    pnk: boolean;
-    o: boolean;
-    location: string;
-    zipCodes: number;
-    historicalWards?: number;
-    communityAreas?: number;
-    censusTracts?: number;
-    wards?: number;
-    
-    constructor(e: any) {
+    stopId;
+    directionId;
+    stopName;
+    stationName;
+    stationDescriptive;
+    mapId;
+    ada;
+    red;
+    blue;
+    g;
+    brn;
+    p;
+    pexp;
+    y;
+    pnk;
+    o;
+    location;
+    zipCodes;
+    historicalWards;
+    communityAreas;
+    censusTracts;
+    wards;
+
+    constructor(e) {
         this.stopId = e.stopId;
         this.directionId = e.directionId;
         this.stopName = e.stopName;

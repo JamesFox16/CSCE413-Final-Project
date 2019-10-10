@@ -1,12 +1,12 @@
 export default class BoardingTotal {
-    rideId: number;
-    serviceDate: Date;
-    dayType: string;
-    busTotal: number;
-    railTotal: number;
-    totalRides: number;
+    rideId;
+    serviceDate;
+    dayType;
+    busTotal;
+    railTotal;
+    totalRides;
 
-    constructor(e: any) {
+    constructor(e) {
         this.rideId = e.rideId;
         this.serviceDate = e.serviceDate;
         this.dayType = e.dayType;

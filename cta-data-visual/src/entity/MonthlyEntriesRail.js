@@ -1,13 +1,13 @@
 export default class MonthlyEntriesRail {
-    stationId: number;
-    stationName: string;
-    monthBegin: Date;
-    averageWeeklyRiders: number;
-    averageSaturdayRiders: number;
-    averageSundayHolidayRiders: number;
-    monthTotal: number;
+    stationId;
+    stationName;
+    monthBegin;
+    averageWeeklyRiders;
+    averageSaturdayRiders;
+    averageSundayHolidayRiders;
+    monthTotal;
 
-    constructor(e: any) {
+    constructor(e) {
         this.stationId = e.stationId;
         this.stationName = e.stationName;
         this.monthBegin = e.monthBegin;
