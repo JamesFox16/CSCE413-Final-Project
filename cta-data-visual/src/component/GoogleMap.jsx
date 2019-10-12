@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 
 const googleKey = require('../api-keys.json');
 
-class GoogleMap extends Component {
+export default class GoogleMap extends Component {
     static defaultProps = {
         center: {
             lat: 0,
@@ -26,4 +26,3 @@ class GoogleMap extends Component {
         );
     }
 }
-export default GoogleMap;
