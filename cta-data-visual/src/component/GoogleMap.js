@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { keys } from '@material-ui/core/styles/createBreakpoints';
 
-var googleKey = require('../api-keys.json');
+const googleKey = require('../api-keys.json');
 
 class GoogleMap extends Component {
     static defaultProps = {
@@ -19,7 +18,7 @@ class GoogleMap extends Component {
                 <GoogleMapReact
                     bootstrapURLKeys={{
                         key: googleKey.GOOGLE_MAPS_KEY
-                    }} //FIX THIS
+                    }}
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
                 ></GoogleMapReact>

@@ -1,15 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import Button from '@material-ui/core/Button';
 import './App.css';
-import { AppBar, Toolbar, IconButton } from '@material-ui/core';
 import MainAppBar from './component/MainAppBar';
-import GoogleMap from './component/GoogleMap';
+import LeafletMap from './component/LeafletMap';
 
 function App() {
     return (
         <div className="App">
             <MainAppBar />
+            <LeafletMap />
         </div>
     );
 }
