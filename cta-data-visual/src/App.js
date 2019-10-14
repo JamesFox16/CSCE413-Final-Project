@@ -4,12 +4,12 @@ import MainAppBar from './component/MainAppBar';
 import LeafletMap from './component/LeafletMap';
 
 function App() {
-    return (
-        <div className="App">
-            <MainAppBar />
-            <LeafletMap />
-        </div>
-    );
+  return (
+    <div className="App">
+      <MainAppBar />
+      <LeafletMap />
+    </div>
+  );
 }
 
 export default App;
