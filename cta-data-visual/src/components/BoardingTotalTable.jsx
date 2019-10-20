@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
-import Paper, { TableBody } from '@material-ui/core';
-import Table from '@material-ui/core';
-import TableRow from '@material-ui/core';
-import TableHead from '@material-ui/core';
-import TableCell from '@material-ui/core';
+import TableBody from '@material-ui/core/TableBody';
+import Table from '@material-ui/core/Table';
+import TableRow from '@material-ui/core/TableRow';
+import TableHead from '@material-ui/core/TableHead';
+import TableCell from '@material-ui/core/TableCell';
+import Paper from '@material-ui/core/Paper';
 
-const style = {};
+const style = {
+  root: {
+    width: '100%',
+    overflowX: 'auto'
+  },
+  table: {
+    minWidth: 650
+  }
+};
 
 export default class BoardingTotalTable extends Component {
   render() {
     return (
-      <Paper>
-        <Table>
+      <Paper className={style.root}>
+        <Table className={style.table}>
           <TableHead>
             <TableRow>
               <TableCell>Ride ID</TableCell>

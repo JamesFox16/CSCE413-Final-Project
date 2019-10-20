@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import MainAppBar from './component/MainAppBar';
-import LeafletMap from './component/LeafletMap';
+import MainAppBar from './components/MainAppBar';
+import LeafletMap from './components/LeafletMap';
 
 function App() {
   return (
