@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const secret = require('./dblogin.json');
+const secret = require('../dblogin.json');
 
 const pool = mysql.createPool({
   connectionLimit: secret.connectionLimit,
@@ -14,7 +14,7 @@ let data = {};
 
 data.all = () => {
   return new Promise((resolve, reject) => {
-    pool.query(`SELECT * FROM dailyRiders`, (err, results) => {
+    pool.query(`SELECT * FROM BoardingTotal`, (err, results) => {
       if (err) {
         return reject(err);
       }
@@ -24,4 +24,3 @@ data.all = () => {
 };
 
 module.exports = data;
-
