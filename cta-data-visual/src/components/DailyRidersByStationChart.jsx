@@ -3,11 +3,11 @@ import {
   XYPlot,
   XAxis,
   YAxis,
-  HorizontalGridLines,
-  VerticalGridLines
+  VerticalGridLines,
+  HorizontalGridLines
 } from 'react-vis';
 
-export default class AvgRidersLineChart extends Component {
+export default class DailyRidersByStationChart extends Component {
   render() {
     return (
       <>
@@ -15,7 +15,7 @@ export default class AvgRidersLineChart extends Component {
           <HorizontalGridLines />
           <VerticalGridLines />
           <XAxis title="Date" />
-          <YAxis title="Average Riders" />
+          <YAxis title="Riders" />
         </XYPlot>
       </>
     );

@@ -7,15 +7,15 @@ import {
   VerticalGridLines
 } from 'react-vis';
 
-export default class AvgRidersLineChart extends Component {
+export default class AvgTotalRidersChart extends Component {
   render() {
     return (
       <>
         <XYPlot xType="original" height={500} width={1000}>
           <HorizontalGridLines />
           <VerticalGridLines />
-          <XAxis title="Date" />
-          <YAxis title="Average Riders" />
+          <XAxis title="Date Month" />
+          <YAxis title="Average Total Riders" />
         </XYPlot>
       </>
     );
