@@ -11,7 +11,7 @@ export default class DailyRidersByStationChart extends Component {
   render() {
     return (
       <>
-        <XYPlot xType="original" height={500} width={1000}>
+        <XYPlot xType="ordinal" height={500} width={1000}>
           <HorizontalGridLines />
           <VerticalGridLines />
           <XAxis title="Date" />
