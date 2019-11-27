@@ -6,6 +6,7 @@ import {
   HorizontalGridLines,
   VerticalGridLines
 } from 'react-vis';
+import 'react-vis/dist/style.css';
 
 export default class AvgRidersLineChart extends Component {
   render() {

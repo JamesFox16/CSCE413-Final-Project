@@ -7,6 +7,7 @@ import {
   VerticalGridLines,
   HorizontalGridLines
 } from 'react-vis';
+import 'react-vis/dist/style.css';
 
 export default class DailyRidersByLineChart extends Component {
   render() {

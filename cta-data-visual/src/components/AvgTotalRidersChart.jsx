@@ -6,9 +6,9 @@ import {
   HorizontalGridLines,
   VerticalGridLines
 } from 'react-vis';
+import 'react-vis/dist/style.css';
 
 export default class AvgTotalRidersChart extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -18,26 +18,24 @@ export default class AvgTotalRidersChart extends Component {
     };
   }
 
-
-
   componentDidMount = () => {
-    fetch("https://localhost:3000/api/data/boardingtotal")
+    fetch('https://localhost:3000/api/data/boardingtotal')
       .then(res => res.json())
       .then(
-        (result) => {
+        result => {
           this.setState({
             isLoaded: true,
             items: result.items
           });
         },
-        (error) => {
+        error => {
           this.setState({
             isLoaded: true,
             error
           });
         }
-      )
-  }
+      );
+  };
 
   render() {
     return (
