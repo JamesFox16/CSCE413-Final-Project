@@ -9,41 +9,50 @@ import {
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 
+const newdata = null;
+
 export default class DailyRidersByStationChart extends Component {
+  constructor() {
+    super();
+    this.state = {
+      error: null,
+      isLoaded: false,
+      items: []
+    };
+  }
+
   componentDidMount = () => {
-    fetch('https://localhost:3000/api/data/deraill')
-      .then(res => res.json())
+    fetch('http://localhost:3005/api/data/derail/station/40340')
+      .then(results => results.json())
       .then(
-        result => {
+        data => {
+          let itemMap = data.map(d => {
+            return { x: d.date, y: d.rides };
+          });
           this.setState({
             isLoaded: true,
-            items: result.items
+            items: itemMap
           });
         },
         error => {
           this.setState({
             isLoaded: true,
-            error
+            error: error
           });
         }
       );
   };
 
   render() {
-    return (
-      <XYPlot xType="ordinal" height={500} width={1000}>
+    return !this.state.isLoaded ? (
+      <div></div>
+    ) : (
+      <XYPlot xType="ordinal" height={900} width={1650}>
         <HorizontalGridLines />
         <VerticalGridLines />
-        <XAxis title="Date" />
+        <XAxis title="Date" tickLabelAngle={-90} />
         <YAxis title="Riders" />
-        <LineSeries
-          color="#3895D3"
-          data={[
-            { x: 1, y: 10 },
-            { x: 2, y: 5 },
-            { x: 3, y: 15 }
-          ]}
-        />
+        <LineSeries color="#3895D3" data={this.state.items} />
       </XYPlot>
     );
   }

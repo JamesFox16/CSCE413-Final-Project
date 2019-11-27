@@ -19,7 +19,7 @@ export default class AvgTotalRidersChart extends Component {
   }
 
   componentDidMount = () => {
-    fetch('https://localhost:3000/api/data/boardingtotal')
+    fetch('/api/data/boardingtotal')
       .then(res => res.json())
       .then(
         result => {

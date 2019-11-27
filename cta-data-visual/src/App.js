@@ -3,6 +3,7 @@ import './App.css';
 import MainAppBar from './components/MainAppBar';
 import CardTile from './components/CardTile';
 import CardGroup from 'react-bootstrap/CardGroup';
+import DailyRidersByStationChart from './components/DailyRidersByStationChart';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           cardText={'lorem ipsum sit dolor'}
         />
       </CardGroup>
+      <DailyRidersByStationChart />
     </div>
   );
 }
