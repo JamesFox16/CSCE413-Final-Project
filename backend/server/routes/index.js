@@ -49,6 +49,7 @@ router.get('/derail/date/:date', async (req, res, next) => {
 });
 
 router.get('/derail/station/:station', async (req, res, next) => {
+  console.log('derail');
   try {
     let results = await db.dailyEntriesStationId(req.params.station);
     res.json(results);

@@ -22,12 +22,12 @@ export default class DailyRidersByStationChart extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3005/api/data/derail/station/40340')
+    fetch('http://localhost:3005/api/data/derail/station/40800')
       .then(results => results.json())
       .then(
         data => {
           let itemMap = data.map(d => {
-            return { x: d.date, y: d.rides };
+            return { x: new Date(d.date).toLocaleDateString(), y: d.rides };
           });
           this.setState({
             isLoaded: true,
@@ -47,13 +47,34 @@ export default class DailyRidersByStationChart extends Component {
     return !this.state.isLoaded ? (
       <div></div>
     ) : (
-      <XYPlot xType="ordinal" height={900} width={1650}>
-        <HorizontalGridLines />
-        <VerticalGridLines />
-        <XAxis title="Date" tickLabelAngle={-90} />
-        <YAxis title="Riders" />
-        <LineSeries color="#3895D3" data={this.state.items} />
-      </XYPlot>
+      <div style={{ padding: 15 }}>
+        <XYPlot
+          xType="ordinal"
+          margin={{ right: 40 }}
+          height={900}
+          width={1600}
+        >
+          <HorizontalGridLines />
+          <VerticalGridLines />
+          <XAxis
+            attr="x"
+            attrAxis="y"
+            orientation="bottom"
+            title="Date"
+            tickLabelAngle={-45}
+            tickFormat={(t, i) => {
+              if ((i + 1) % 365 === 0) {
+                return t.split(',')[0];
+              } else {
+                return;
+              }
+            }}
+            orientation="bottom"
+          />
+          <YAxis attr="y" attrAxis="x" orientation="left" title="Riders" />
+          <LineSeries color="#3895D3" data={this.state.items} />
+        </XYPlot>
+      </div>
     );
   }
 }
