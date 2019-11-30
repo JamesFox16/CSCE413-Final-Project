@@ -3,7 +3,7 @@ import './App.css';
 import MainAppBar from './components/MainAppBar';
 import CardTile from './components/CardTile';
 import CardGroup from 'react-bootstrap/CardGroup';
-import DailyRidersByStationChart from './components/DailyRidersByStationChart';
+import MonthlyRidersTotalStationChart from './components/MonthlyRidersTotalStationChart';
 
 function App() {
   return (
@@ -13,37 +13,49 @@ function App() {
         <CardTile
           style={{ padding: 15 }}
           cardTitle={'Test'}
-          cardText={'lorem ipsum sit dolor'}
+          cardText={
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
         />
         <CardTile
           style={{ padding: 15 }}
           cardTitle={'Test'}
-          cardText={'lorem ipsum sit dolor'}
+          cardText={
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
         />
         <CardTile
           style={{ padding: 15 }}
           cardTitle={'Test'}
-          cardText={'lorem ipsum sit dolor'}
+          cardText={
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
         />
       </CardGroup>
       <CardGroup style={{ padding: 15 }}>
         <CardTile
           style={{ padding: 15 }}
           cardTitle={'Test'}
-          cardText={'lorem ipsum sit dolor'}
+          cardText={
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
         />
         <CardTile
           style={{ padding: 15 }}
           cardTitle={'Test'}
-          cardText={'lorem ipsum sit dolor'}
+          cardText={
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
         />
         <CardTile
           style={{ padding: 15 }}
           cardTitle={'Test'}
-          cardText={'lorem ipsum sit dolor'}
+          cardText={
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
         />
       </CardGroup>
-      <DailyRidersByStationChart />
+      <MonthlyRidersTotalStationChart />
     </div>
   );
 }
