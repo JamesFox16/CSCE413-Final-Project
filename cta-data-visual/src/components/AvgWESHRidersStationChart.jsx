@@ -4,11 +4,12 @@ import {
   XAxis,
   YAxis,
   HorizontalGridLines,
-  VerticalGridLines
+  VerticalGridLines,
+  LineSeries
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 
-export default class AvgTotalRidersChart extends Component {
+export default class AvgWESHRidersStationChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,13 +20,19 @@ export default class AvgTotalRidersChart extends Component {
   }
 
   componentDidMount = () => {
-    fetch('/api/data/boardingtotal')
+    fetch('http://localhost:3005/api/data/merail/station/40800')
       .then(res => res.json())
       .then(
-        result => {
+        data => {
+          let itemMap = data.map(d => {
+            return {
+              x: new Date(d.month_beginning).toLocaleDateString(),
+              y: d.avg_sunday_holiday_rides
+            };
+          });
           this.setState({
             isLoaded: true,
-            items: result.items
+            items: itemMap
           });
         },
         error => {
@@ -45,6 +52,7 @@ export default class AvgTotalRidersChart extends Component {
           <VerticalGridLines />
           <XAxis title="Date Month" />
           <YAxis title="Average Total Riders" />
+          <LineSeries color="#3895D3" data={this.state.items} />
         </XYPlot>
       </>
     );

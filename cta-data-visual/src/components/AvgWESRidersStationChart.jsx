@@ -3,17 +3,15 @@ import {
   XYPlot,
   XAxis,
   YAxis,
-  VerticalGridLines,
   HorizontalGridLines,
+  VerticalGridLines,
   LineSeries
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 
-const newdata = null;
-
-export default class MonthlyRidersTotalStationChart extends Component {
-  constructor() {
-    super();
+export default class AvgWESRidersStationChart extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       error: null,
       isLoaded: false,
@@ -23,13 +21,13 @@ export default class MonthlyRidersTotalStationChart extends Component {
 
   componentDidMount = () => {
     fetch('http://localhost:3005/api/data/merail/station/40800')
-      .then(results => results.json())
+      .then(res => res.json())
       .then(
         data => {
           let itemMap = data.map(d => {
             return {
               x: new Date(d.month_beginning).toLocaleDateString(),
-              y: d.monthtotal
+              y: d.avg_saturday_rides
             };
           });
           this.setState({
@@ -40,37 +38,23 @@ export default class MonthlyRidersTotalStationChart extends Component {
         error => {
           this.setState({
             isLoaded: true,
-            error: error
+            error
           });
         }
       );
   };
 
   render() {
-    return !this.state.isLoaded ? (
-      <div></div>
-    ) : (
-      <div style={{ padding: 15 }}>
-        <XYPlot
-          xType="ordinal"
-          margin={{ right: 40 }}
-          height={900}
-          width={1600}
-        >
+    return (
+      <>
+        <XYPlot xType="ordinal" height={500} width={1000}>
           <HorizontalGridLines />
           <VerticalGridLines />
-          <XAxis
-            attr="x"
-            attrAxis="y"
-            orientation="bottom"
-            title="Date"
-            tickLabelAngle={-90}
-            orientation="bottom"
-          />
-          <YAxis attr="y" attrAxis="x" orientation="left" title="Riders" />
+          <XAxis title="Date Month" />
+          <YAxis title="Average Total Riders" />
           <LineSeries color="#3895D3" data={this.state.items} />
         </XYPlot>
-      </div>
+      </>
     );
   }
 }
