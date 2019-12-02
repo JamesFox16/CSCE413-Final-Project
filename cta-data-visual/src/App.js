@@ -4,6 +4,7 @@ import MainAppBar from './components/MainAppBar';
 import CardTile from './components/CardTile';
 import CardGroup from 'react-bootstrap/CardGroup';
 import MonthlyRidersTotalStationChart from './components/MonthlyRidersTotalStationChart';
+import StationDropdown from './components/StationDropdown';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           }
         />
       </CardGroup>
+      <StationDropdown />
       <MonthlyRidersTotalStationChart />
     </div>
   );
