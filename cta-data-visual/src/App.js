@@ -1,63 +1,13 @@
 import React from 'react';
 import './App.css';
 import MainAppBar from './components/MainAppBar';
-import CardTile from './components/CardTile';
-import CardGroup from 'react-bootstrap/CardGroup';
-import MonthlyRidersTotalStationChart from './components/MonthlyRidersTotalStationChart';
-import StationDropdown from './components/StationDropdown';
+import Avgwdriders from './pages/Dataview/Avgwdriders/Avgwdriders';
 
 function App() {
   return (
     <div className="App">
       <MainAppBar />
-      <CardGroup style={{ padding: 15 }}>
-        <CardTile
-          style={{ padding: 15 }}
-          cardTitle={'Test'}
-          cardText={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        />
-        <CardTile
-          style={{ padding: 15 }}
-          cardTitle={'Test'}
-          cardText={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        />
-        <CardTile
-          style={{ padding: 15 }}
-          cardTitle={'Test'}
-          cardText={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        />
-      </CardGroup>
-      <CardGroup style={{ padding: 15 }}>
-        <CardTile
-          style={{ padding: 15 }}
-          cardTitle={'Test'}
-          cardText={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        />
-        <CardTile
-          style={{ padding: 15 }}
-          cardTitle={'Test'}
-          cardText={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        />
-        <CardTile
-          style={{ padding: 15 }}
-          cardTitle={'Test'}
-          cardText={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        />
-      </CardGroup>
-      <StationDropdown />
-      <MonthlyRidersTotalStationChart />
+      <Avgwdriders />
     </div>
   );
 }

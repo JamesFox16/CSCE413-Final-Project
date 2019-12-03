@@ -77,7 +77,13 @@ export default class AvgWDRidersStationChart extends Component {
 
   render() {
     return (
-      <>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
         <XYPlot xType="ordinal" height={500} width={1000}>
           <HorizontalGridLines />
           <VerticalGridLines />
@@ -85,7 +91,7 @@ export default class AvgWDRidersStationChart extends Component {
           <YAxis title="Average Total Riders" />
           <LineSeries color="#3895D3" data={this.state.items} />
         </XYPlot>
-      </>
+      </div>
     );
   }
 }

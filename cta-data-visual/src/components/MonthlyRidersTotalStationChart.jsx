@@ -9,8 +9,6 @@ import {
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 
-const newdata = null;
-
 export default class MonthlyRidersTotalStationChart extends Component {
   constructor() {
     super();
