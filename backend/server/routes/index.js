@@ -77,6 +77,7 @@ router.get('/merail/month/:month', async (req, res, next) => {
 });
 
 router.get('/merail/station/:station', async (req, res, next) => {
+  console.log(req.params.station);
   try {
     let results = await db.monthlyEntriesRailStationId(req.params.station);
     res.json(results);

@@ -4,6 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { tsConstructorType } from '@babel/types';
 
 const classes = makeStyles(theme => ({
   formControl: {
@@ -16,15 +17,21 @@ const classes = makeStyles(theme => ({
   }
 }));
 
-export default function StationDropdown() {
+export default function StationDropdown(props) {
   const [id, setId] = React.useState('');
+
   const handleChange = event => {
     setId(event.target.value);
-    console.log(id);
+    sendData(event.target.value);
   };
+
+  const sendData = stationId => {
+    props.stationCallback(stationId);
+  };
+
   return (
     <FormControl className={classes.formControl}>
-      <InputLabel id="line-name">Line Name</InputLabel>
+      <InputLabel id="line-name">Station Name</InputLabel>
       <Select
         labelId="line-name"
         id="line-select"

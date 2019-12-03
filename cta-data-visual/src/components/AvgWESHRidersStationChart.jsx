@@ -20,7 +20,7 @@ export default class AvgWESHRidersStationChart extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3005/api/data/merail/station/40800')
+    fetch('http://localhost:3005/api/data/merail/station/')
       .then(res => res.json())
       .then(
         data => {
