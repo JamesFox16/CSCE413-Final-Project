@@ -20,7 +20,9 @@ export default class MonthlyRidersTotalStationChart extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3005/api/data/merail/station/40800')
+    fetch(
+      'http://localhost:3005/api/data/merail/station/' + this.props.stationId
+    )
       .then(results => results.json())
       .then(
         data => {
@@ -42,6 +44,35 @@ export default class MonthlyRidersTotalStationChart extends Component {
           });
         }
       );
+  };
+
+  componentDidUpdate = prevProps => {
+    if (prevProps.stationId !== this.props.stationId) {
+      fetch(
+        'http://localhost:3005/api/data/merail/station/' + this.props.stationId
+      )
+        .then(results => results.json())
+        .then(
+          data => {
+            let itemMap = data.map(d => {
+              return {
+                x: new Date(d.month_beginning).toLocaleDateString(),
+                y: d.monthtotal
+              };
+            });
+            this.setState({
+              isLoaded: true,
+              items: itemMap
+            });
+          },
+          error => {
+            this.setState({
+              isLoaded: true,
+              error: error
+            });
+          }
+        );
+    }
   };
 
   render() {
