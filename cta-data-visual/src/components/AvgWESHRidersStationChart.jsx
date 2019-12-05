@@ -77,15 +77,26 @@ export default class AvgWESHRidersStationChart extends Component {
 
   render() {
     return (
-      <>
-        <XYPlot xType="ordinal" height={500} width={1000}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <XYPlot xType="ordinal" height={750} width={1500}>
           <HorizontalGridLines />
           <VerticalGridLines />
           <XAxis title="Date Month" />
-          <YAxis title="Average Total Riders" />
+          <YAxis
+            title="Average Total Riders"
+            width={100}
+            left={-50}
+            tickPadding={0}
+          />
           <LineSeries color="#3895D3" data={this.state.items} />
         </XYPlot>
-      </>
+      </div>
     );
   }
 }

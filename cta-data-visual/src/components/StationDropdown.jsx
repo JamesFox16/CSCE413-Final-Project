@@ -42,8 +42,6 @@ export default function StationDropdown(props) {
         <MenuItem value={41190}>Jarvis</MenuItem>
         <MenuItem value={40100}>Morse</MenuItem>
         <MenuItem value={41300}>Loyola</MenuItem>
-        <MenuItem value={41300}>Granville</MenuItem>
-        <MenuItem value={41300}>Loyola</MenuItem>
         <MenuItem value={40760}>Granville</MenuItem>
         <MenuItem value={40880}>Thorndale</MenuItem>
         <MenuItem value={41380}>Bryn Mawr</MenuItem>

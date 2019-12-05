@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import MainAppBar from './components/MainAppBar';
-import Avgwdriders from './pages/Dataview/Avgwdriders/Avgwdriders';
+import Avgwesriders from './pages/Dataview/Avgwesriders/Avgwesriders';
+import Monthridersstation from './pages/Dataview/Monthridersstation/Monthridersstation';
 
 function App() {
   return (
     <div className="App">
       <MainAppBar />
-      <Avgwdriders />
+      <Monthridersstation />
     </div>
   );
 }

@@ -12,11 +12,16 @@ export default class AvgRidersLineChart extends Component {
   render() {
     return (
       <>
-        <XYPlot xType="ordinal" height={500} width={1000}>
+        <XYPlot xType="ordinal" height={750} width={1500}>
           <HorizontalGridLines />
           <VerticalGridLines />
           <XAxis title="Date" />
-          <YAxis title="Average Riders" />
+          <YAxis
+            title="Average Riders"
+            width={100}
+            left={-50}
+            tickPadding={0}
+          />
         </XYPlot>
       </>
     );

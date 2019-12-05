@@ -79,25 +79,37 @@ export default class MonthlyRidersTotalStationChart extends Component {
     return !this.state.isLoaded ? (
       <div></div>
     ) : (
-      <div style={{ padding: 15 }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
         <XYPlot
           xType="ordinal"
-          margin={{ right: 40 }}
-          height={900}
-          width={1600}
+          height={750}
+          width={1500}
         >
           <HorizontalGridLines />
           <VerticalGridLines />
           <XAxis
-            attr="x"
-            attrAxis="y"
-            orientation="bottom"
             title="Date"
             tickLabelAngle={-90}
             orientation="bottom"
+            height={300}
           />
-          <YAxis attr="y" attrAxis="x" orientation="left" title="Riders" />
-          <LineSeries color="#3895D3" data={this.state.items} />
+          <YAxis
+            title="Riders"
+            width={100}
+            left={-50}
+            tickPadding={0}
+          />
+          <LineSeries
+            color="#3895D3"
+            data={this.state.items}
+            animation="true"
+          />
         </XYPlot>
       </div>
     );
