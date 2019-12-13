@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import CardTile from '../../components/CardTile';
 import CardGroup from 'react-bootstrap/CardGroup';
-import MonthlyRidersTotalStationChart from '../../components/MonthlyRidersTotalStationChart';
-import StationDropdown from '../../components/StationDropdown';
-import TotalAllTime from '../../components/TotalAllTime';
 
 export default class Home extends Component {
   render() {

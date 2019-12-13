@@ -5,8 +5,7 @@ import {
   YAxis,
   VerticalGridLines,
   HorizontalGridLines,
-  VerticalBarSeries,
-  Hint
+  VerticalBarSeries
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 

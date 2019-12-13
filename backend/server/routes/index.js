@@ -49,7 +49,6 @@ router.get('/derail/date/:date', async (req, res, next) => {
 });
 
 router.get('/derail/station/:station', async (req, res, next) => {
-  console.log('derail');
   try {
     let results = await db.dailyEntriesStationId(req.params.station);
     res.json(results);
@@ -77,7 +76,6 @@ router.get('/merail/month/:month', async (req, res, next) => {
 });
 
 router.get('/merail/station/:station', async (req, res, next) => {
-  console.log(req.params.station);
   try {
     let results = await db.monthlyEntriesRailStationId(req.params.station);
     res.json(results);
