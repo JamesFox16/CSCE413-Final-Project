@@ -9,6 +9,7 @@ export default class Avgweshriders extends Component {
       stationId: 40900
     };
   }
+
   changeId = stationIdp => {
     this.setState({
       stationId: stationIdp

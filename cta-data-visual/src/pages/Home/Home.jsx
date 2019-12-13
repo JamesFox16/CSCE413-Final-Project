@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardTile from '../../components/CardTile'
+import CardTile from '../../components/CardTile';
 import CardGroup from 'react-bootstrap/CardGroup';
 import MonthlyRidersTotalStationChart from '../../components/MonthlyRidersTotalStationChart';
 import StationDropdown from '../../components/StationDropdown';
@@ -12,50 +12,28 @@ export default class Home extends Component {
           <CardTile
             style={{ padding: 15 }}
             cardTitle={'Test'}
-            cardText={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            }
+            cardText={'Average Weekday Riders line chart'}
+            link="/avgwdriders"
           />
           <CardTile
             style={{ padding: 15 }}
             cardTitle={'Test'}
-            cardText={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            }
+            cardText={'Average Weekend Sunday Holiday Riders line chart'}
+            link="/Avgweshriders"
           />
           <CardTile
             style={{ padding: 15 }}
             cardTitle={'Test'}
-            cardText={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            }
+            cardText={'Average Weekend Saturday Riders line chart'}
+            link="/Avgwesriders"
+          />
+          <CardTile
+            style={{ padding: 15 }}
+            cardTitle={'Test'}
+            cardText={'Monthly Riders by station line chart'}
+            link="/monthridersstation"
           />
         </CardGroup>
-        <CardGroup style={{ padding: 15 }}>
-          <CardTile
-            style={{ padding: 15 }}
-            cardTitle={'Test'}
-            cardText={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            }
-          />
-          <CardTile
-            style={{ padding: 15 }}
-            cardTitle={'Test'}
-            cardText={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            }
-          />
-          <CardTile
-            style={{ padding: 15 }}
-            cardTitle={'Test'}
-            cardText={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            }
-          />
-        </CardGroup>
-        <StationDropdown />
-        <MonthlyRidersTotalStationChart />
       </>
     );
   }

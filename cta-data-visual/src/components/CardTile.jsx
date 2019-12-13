@@ -11,7 +11,7 @@ export default class CardTile extends Component {
         <Card.Body>
           <Card.Title>{this.props.cardTitl}</Card.Title>
           <Card.Text>{this.props.cardText}</Card.Text>
-          <Button variant="primary">View visualization</Button>
+          <Button variant="primary" href={this.props.link}>View visualization</Button>
         </Card.Body>
       </Card>
     );
