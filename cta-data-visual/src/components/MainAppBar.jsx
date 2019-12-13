@@ -11,8 +11,8 @@ export default class MainAppBar extends Component {
             <Navbar.Brand href="/">CTA Data</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/Avgwdriders">Data</Nav.Link>
-              <Nav.Link href="#lineMaps">Line Maps</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="/linesmap">Line Maps</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
             </Nav>
           </Navbar>
         </Router>

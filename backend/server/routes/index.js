@@ -86,6 +86,15 @@ router.get('/merail/station/:station', async (req, res, next) => {
   }
 });
 
+router.get('/all/totalrides', async (req, res, next) => {
+  try {
+    let results = await db.allTimesRidesByStation();
+    res.json(results);
+  } catch (e) {
+    res.sendStatus(500);
+  }
+});
+
 router.get('/lstop', async (req, res, next) => {
   res.json({ test: 'test' });
 });

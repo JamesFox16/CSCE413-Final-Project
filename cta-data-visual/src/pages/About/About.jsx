@@ -5,7 +5,12 @@ export default class About extends Component {
     return (
       <>
         <h2>About</h2>
-        <p>This is an about page...</p>
+        <p>
+          Data from the Chicago Transit Authority used to gain insight on the
+          use of public transportation in Chicago.
+        </p>
+        <p>UNL CSCE-413 Final Project</p>
+        <p>Created by James Fox</p>
       </>
     );
   }
