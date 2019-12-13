@@ -3,6 +3,7 @@ import CardTile from '../../components/CardTile';
 import CardGroup from 'react-bootstrap/CardGroup';
 import MonthlyRidersTotalStationChart from '../../components/MonthlyRidersTotalStationChart';
 import StationDropdown from '../../components/StationDropdown';
+import TotalAllTime from '../../components/TotalAllTime';
 
 export default class Home extends Component {
   render() {
@@ -27,11 +28,25 @@ export default class Home extends Component {
             cardText={'Average Weekend Saturday Riders line chart'}
             link="/Avgwesriders"
           />
+        </CardGroup>
+        <CardGroup style={{ padding: 15 }}>
           <CardTile
             style={{ padding: 15 }}
             cardTitle={'Test'}
             cardText={'Monthly Riders by station line chart'}
             link="/monthridersstation"
+          />
+          <CardTile
+            style={{ padding: 15 }}
+            cardTitle={'Test'}
+            cardText={'Total riders for data collection lifetime'}
+            link="/totalriders"
+          />
+          <CardTile
+            style={{ padding: 15 }}
+            cardTitle={'Test'}
+            cardText={'Daily riders by station line chart'}
+            link="/dailyriders"
           />
         </CardGroup>
       </>

@@ -94,7 +94,11 @@ export default class AvgWDRidersStationChart extends Component {
             left={-50}
             tickPadding={0}
           />
-          <LineSeries color="#3895D3" data={this.state.items} />
+          <LineSeries
+            animation="true"
+            color="#3895D3"
+            data={this.state.items}
+          />
         </XYPlot>
       </div>
     );

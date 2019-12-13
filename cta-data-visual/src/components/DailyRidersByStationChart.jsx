@@ -20,7 +20,9 @@ export default class DailyRidersByStationChart extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3005/api/data/derail/station/40800')
+    fetch(
+      'http://localhost:3005/api/data/derail/station/' + this.props.stationId
+    )
       .then(results => results.json())
       .then(
         data => {
@@ -41,10 +43,34 @@ export default class DailyRidersByStationChart extends Component {
       );
   };
 
+  componentDidUpdate = prevProps => {
+    if (prevProps.stationId !== this.props.stationId) {
+      fetch(
+        'http://localhost:3005/api/data/derail/station/' + this.props.stationId
+      )
+        .then(results => results.json())
+        .then(
+          data => {
+            let itemMap = data.map(d => {
+              return { x: new Date(d.date).toLocaleDateString(), y: d.rides };
+            });
+            this.setState({
+              isLoaded: true,
+              items: itemMap
+            });
+          },
+          error => {
+            this.setState({
+              isLoaded: true,
+              error: error
+            });
+          }
+        );
+    }
+  };
+
   render() {
-    return !this.state.isLoaded ? (
-      <div></div>
-    ) : (
+    return (
       <div style={{ padding: 15 }}>
         <XYPlot
           xType="ordinal"

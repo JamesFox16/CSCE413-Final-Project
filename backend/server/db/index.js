@@ -123,7 +123,7 @@ data.monthlyEntriesRailStationId = stationId => {
 data.allTimesRidesByStation = () => {
   return new Promise((resolve, reject) => {
     pool.query(
-      'SELECT SUM(monthtotal), station_name FROM MonthlyEntriesRail GROUP BY station_name',
+      'SELECT SUM(monthtotal) AS totalr, station_name FROM MonthlyEntriesRail GROUP BY station_name',
       (err, results) => {
         if (err) {
           return reject(err);

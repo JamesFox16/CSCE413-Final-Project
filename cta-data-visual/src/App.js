@@ -9,6 +9,8 @@ import Avgwesriders from './pages/Dataview/Avgwesriders/Avgwesriders';
 import Monthridersstation from './pages/Dataview/Monthridersstation/Monthridersstation';
 import About from './pages/About/About';
 import LinesMap from './pages/LinesMap/LinesMap';
+import Totalriders from './pages/Dataview/TotalRiders/Totalriders';
+import Dailyriders from './pages/Dataview/Dailyriders/Dailyriders';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/monthridersstation" component={Monthridersstation} />
           <Route path="/about" component={About} />
           <Route path="/linesmap" component={LinesMap} />
+          <Route path="/totalriders" component={Totalriders} />
+          <Route path="/dailyriders" component={Dailyriders} />
         </Switch>
       </Router>
     </div>
