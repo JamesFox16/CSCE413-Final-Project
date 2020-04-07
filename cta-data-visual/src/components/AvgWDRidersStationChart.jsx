@@ -87,7 +87,7 @@ export default class AvgWDRidersStationChart extends Component {
         <XYPlot xType="ordinal" height={750} width={1500}>
           <HorizontalGridLines />
           <VerticalGridLines />
-          <XAxis title="Date Month" />
+          <XAxis title="Date Month" tickLabelAngle={-90} />
           <YAxis
             title="Average Total Riders"
             width={100}

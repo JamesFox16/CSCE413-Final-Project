@@ -9,7 +9,7 @@ export default class CardTile extends Component {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={image} style={{ padding: 15 }} />
         <Card.Body>
-          <Card.Title>{this.props.cardTitl}</Card.Title>
+          <Card.Title>{this.props.cardTitle}</Card.Title>
           <Card.Text>{this.props.cardText}</Card.Text>
           <Button variant="primary" href={this.props.link}>View visualization</Button>
         </Card.Body>
